@@ -44,7 +44,8 @@
         # Shrimple dev shell to allow for local debug
         devShell = pkgs.mkShell {
           buildInputs = with pkgs.python3.pkgs; [
-            wheel
+            pyvisa
+            pyusb
           ];
 
           packages = [
