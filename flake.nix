@@ -28,6 +28,7 @@
 
           propagatedBuildInputs = with pkgs.python3.pkgs; [
             pyvisa
+            pyvisa-py
             pyusb
           ];
 
@@ -45,6 +46,7 @@
         devShell = pkgs.mkShell {
           buildInputs = with pkgs.python3.pkgs; [
             pyvisa
+            pyvisa-py
             pyusb
           ];
 
