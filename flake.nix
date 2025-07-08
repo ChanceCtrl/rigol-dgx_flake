@@ -18,12 +18,17 @@
           pname = "rigol-dgx"; # So it knows what to build
           version = "0.1.0"; # Meta data stuffs
           pyproject = true; # So it knows how to build
-          sourceRoot = "source/rigol-dgx"; # So it knows where it needs to build from
 
-          src = "./"
+          src = ./rigol-dgx;
 
           buildInputs = with pkgs.python3.pkgs; [
+            setuptools
             wheel
+          ];
+
+          propagatedBuildInputs = with pkgs.python3.pkgs; [
+            pyvisa
+            pyusb
           ];
 
           # Optional data for nix tooling stuffs
